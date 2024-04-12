@@ -3,10 +3,16 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { AppGestformTestComponent } from './src/app/app-gestform-test/app-gestform-test.component';
+import { AppGestformTestAproposComponent } from './app-gestform-test-apropos/app-gestform-test-apropos.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AppGestformTestComponent,
+    AppGestformTestAproposComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
