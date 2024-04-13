@@ -1,1 +1,35 @@
-<p>app-gestform-test-apropos works!</p>
+<hr>
+<div class="row">
+  <div class="col-xs-12 fs-5">
+    <div class="m-3">
+      <p>Bonjour !</p>
+      <p>Voici ma réponse au test de développement pour rejoindre l'équipe de GESTFORM en tant que développeur
+        Angular.</p>
+
+      <div class="d-flex justify-content-center align-items-center">
+        <a href="/assets/Test-dev-gestform_-_2023-09-05.pdf" class="m-3"
+           target="_blank" title="Télécharger l'énoncé du test">
+          <i class="fa-regular fa-file-pdf fa-2xl" style="color: red;"></i>énoncé
+        </a>
+
+      </div>
+
+      <p>Je suis d'abord parti de l'algorithme en limitant la liste de nombres aléatoires générées à
+        10 nombres et en utilisant une liste de résultats de même taille.</p>
+      <p>Comme l'énoncé ne précisait pas de taille de liste, j'ai supprimé cette limite pour générer
+        des nombres aléatoires en continu et les transformer à la volée.</p>
+      <p>Les listes de nombres aléatoires et de résultats sont donc devenues de tailles exponentielles
+        jusqu'à pouvoir éventuellement saturer le système client.</p>
+      <p>Pour contourner ce problème, je n'ai plus utilisé de listes tout en continuant à générer des nombres aléatoires
+        et en les traitant au fur et à mesure. Les résultats ne sont plus stockés mais affichés au fur et à mesure.</p>
+      <p>Pour cela, j'ai créé un Observable temporisé (interval) qui génère un nombre aléatoire toutes les 500
+        millisecondes. Des boutons "- vite" et "+ vite" permettent d'ajuster la vitesse de génération.</p>
+      <p>J'ai également ajouté des boutons "Start/Resume", "Pause" et "Reset".</p>
+      <p>Il pourrait être intéressant par exemple d'ajouter une partie Backend pour stocker les résultats et permettre à l'utilisateur de les rejouer.</p>
+      <p>Je vous remercie pour cette opportunité et je reste à votre disposition pour toute question ou information
+        complémentaire.</p>
+      <p>Cliquez sur "Test" en haut de la page pour y accéder.</p>
+      <p>Bonne réception, Jérôme Moussalli</p>
+    </div>
+  </div>
+</div>

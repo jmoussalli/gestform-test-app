@@ -1,4 +1,5 @@
-![gestform.png](gestform.png)
+![GESTFORM.png](src/assets/GESTFORM.png)
+
 # GestFormTest
 Version : 1.0
 Date : 11/09/2020
@@ -51,13 +52,3 @@ zone.js                         0.14.4
 3. Exécuter la commande `npm install` pour installer les dépendances
 4. Exécuter la commande `ng serve` pour lancer le serveur de développement
 5. Ouvrir un navigateur et accéder à l'adresse `http://localhost:4200/`
-
-## Fonctionnalités
-
-1. Génération de données aléatoires
-   * Création d'une liste de nombres entiers aléatoires : Le programme est capable de générer une séquence de nombres entiers. Chaque nombre est sélectionné aléatoirement et se trouve dans un intervalle défini entre -1000 et 1000.
-2. Application de règles conditionnelles
-   * Divisibilité par 3 : Pour chaque nombre de la liste, le programme vérifie s'il est divisible par 3. Si c'est le cas, le programme répond par une action spécifique, comme afficher le mot "Geste".
-   * Divisibilité par 5 : De même, le programme vérifie la divisibilité de chaque nombre par 5 et réagit en conséquence en affichant "Forme" si la condition est remplie.
-   * Divisibilité par 3 et 5 (simultanément) : Une vérification supplémentaire est faite pour les nombres qui sont à la fois divisibles par 3 et 5 (ce qui équivaut à vérifier la divisibilité par 15), auquel cas le programme affiche "Gestform".
-   * Traitement des cas non spécifiés : Pour tous les nombres qui ne répondent à aucune des conditions ci-dessus, le programme affiche le nombre lui-même.

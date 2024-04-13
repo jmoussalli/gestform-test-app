@@ -1,1 +1,20 @@
-<p>header works!</p>
+<nav class="navbar navbar-light navbar-expand-lg bg-primary">
+  <div class="container-fluid">
+    <a routerLink="/" class="navbar-brand">
+      <img src="/assets/logo_gestform.png" alt="Logo" style="height: 30px;">
+    </a>
+
+    <button class="navbar-toggler" type="button" (click)="isCollapsed = !isCollapsed"
+            data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="fas fa-bars"></i> <!-- Font Awesome Icon -->
+    </button>
+
+    <div id="navbarCollapse" class="navbar-collapse" [collapse]="isCollapsed">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item" routerLinkActive="active"><a routerLink="/test" class="nav-link menu-link">Test</a></li>
+        <li class="nav-item" routerLinkActive="active"><a routerLink="/apropos" class="nav-link menu-link">A propos</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>

@@ -1,1 +1,49 @@
-<p>app-gestform-test works!</p>
+<div class="container">
+  <p class="text-center">Soit une <span class="fw-bold">liste aléatoire</span> de <span
+    class="fw-bold">nombres entiers</span>, compris
+    entre <span class="fw-bold">-1000 et 1000</span>.</p>
+  <p>Pour chaque nombre n de cette liste, on veut effectuer les opérations suivantes :</p>
+  <ul>
+    <li>si le nombre est divisible par <span class="fw-bold">3</span> : on affiche <span class="fw-bold">Geste</span>
+    </li>
+    <li>si le nombre est divisible par <span class="fw-bold">5</span> : on affiche <span class="fw-bold">Forme</span>
+    </li>
+    <li>si le nombre est divisible par <span class="fw-bold">3</span> et par <span class="fw-bold">5</span> : on affiche
+      <span class="fw-bold">Gestform</span> (d’où le nom du test)
+    </li>
+    <li><span class="fw-bold">sinon : on affiche le nombre n</span></li>
+  </ul>
+
+  <div class="mx-auto" style="width: 100%;">
+    <div class="badge fs-6 text-bg-success m-3 p-3">
+      Cliquez sur Start pour commençer
+    </div>
+
+    <div class="align-baseline">
+      <button class="btn btn-danger m-3 fs-5" (click)="resetPage()">Reset</button>
+      <button class="btn btn-primary m-3 fs-5" (click)="startGeneratingNumbers()"
+              [disabled]="!isPaused">
+        {{ libStartButtonLabel }}
+      </button>
+      <button class="btn btn-warning m-3 fs-5" (click)="stopGeneratingNumbers()"
+              [disabled]="isPaused">
+        Pause
+      </button>
+      <button class="btn btn-secondary m-3 fs-5" (click)="increaseInterval()">
+        - vite
+      </button>
+      <button class="btn btn-secondary m-3 fs-5" (click)="decreaseInterval()" [disabled]="currentIntervalSubject.value <= 100">
+        + vite
+      </button>
+      <p>Intervalle de temps entre deux générations : {{ currentIntervalSubject.value }} ms</p>
+    </div>
+
+    <div *ngIf="numberGenerationSubscription !== null">
+      <h5>Nombre généré : {{ currentNumber }} => Résultat
+        : {{ currentResult }}</h5>
+      <h5>Derniers Résultats</h5>
+      <textarea id="resultsTextarea" [value]="tenLastResults.join(', ')" rows="10"
+                cols="80"></textarea>
+    </div>
+  </div>
+</div>
